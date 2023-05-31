@@ -7,6 +7,8 @@ import { FileModule } from './file/file.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { databaseOptions } from './config/database';
 import { FileEntity } from './file/file.entity';
+import { ProductController } from './product/product.controller';
+import { ProductService } from './product/product.service';
 
 @Module({
   imports: [
@@ -14,7 +16,7 @@ import { FileEntity } from './file/file.entity';
     TypeOrmModule.forRoot({ ...databaseOptions, entities: [FileEntity] }),
     FileModule,
   ],
-  controllers: [AppController],
-  providers: [AppService],
+  controllers: [AppController, ProductController],
+  providers: [AppService, ProductService],
 })
 export class AppModule {}

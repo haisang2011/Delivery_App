@@ -7,8 +7,6 @@ import { UserModule } from './user/user.module';
 import { EmailModule } from './email/email.module';
 import { CacheModule } from '@nestjs/cache-manager';
 
-console.log("==> App: ", { environments });
-
 @Module({
   imports: [
     MongooseModule.forRoot(`mongodb://${environments.dbHost}/${environments.dbName}`),

@@ -1,0 +1,7 @@
+node_modules
+
+store-service/node_modules
+
+user-service/node_modules
+
+ui-service/node_modules
